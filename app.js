@@ -28,7 +28,7 @@ let url = 'mongodb+srv://MyShop:MyShop123@cluster0.taifmws.mongodb.net/MyShopret
 
 mongoose
 .connect(url)   // MongoDB Atlas
-.then(()=>{console.log("db connected")})
+.then(()=>{console.log("DB connected Successfuly")})
 .catch((err)=>{console.log("error is:", err)})
 
 app.set('view engine', 'ejs')
