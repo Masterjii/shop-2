@@ -23,6 +23,9 @@
         <p>
           <%=item.desc%>
         </p>
+        <form class="d-inline" action="/user/cart/<%= item._id %>/remove" method="POST">
+          <button type="submit" class="btn btn-md btn-danger me-2">Remove</button>
+        </form>
         <% } %>
      </div>
     </div>

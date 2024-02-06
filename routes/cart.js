@@ -48,6 +48,35 @@ router.get('/checkout/:id', async (req, res) => {
   res.redirect(303, session.url);
   });
 
+// Buy route -
+// Route to handle the checkout process
+router.post('/checkout/:productId', async (req, res) => {
+  try {
+    const { productId } = req.params;
+    const foundProduct = await Product.findById(productId);
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [{
+        price_data: {
+          currency: 'inr',
+          product_data: {
+            name: foundProduct.name,
+            images: [foundProduct.img],
+          },
+          unit_amount: foundProduct.price * 100, // in cents
+        },
+        quantity: 1,
+      }],
+      mode: 'payment',
+      success_url: 'http://example.com/success',
+      cancel_url: 'http://example.com/cancel',
+    });
+    res.redirect(303, session.url);
+  } catch (error) {
+    res.status(500).send({ error: error.message });
+  }
+});
+
 
 // cart  route -
 router.post('/user/:productId/add', isLoggedIn, async (req,res)=>{
@@ -66,6 +95,22 @@ catch(e){
 }
 
 });  
+
+// cart  remove route -
+router.post('/user/cart/:productId/remove', isLoggedIn, async (req, res) => {
+  try {
+    const { productId } = req.params;
+    const userId = req.user._id;
+
+    // Remove the product from the user's cart
+    await User.findByIdAndUpdate(userId, { $pull: { cart: productId } });
+
+    res.redirect('/user/cart');
+  } catch (error) {
+    res.status(500).render('error', { err: error.message });
+  }
+});
+
 
 module.exports = router;
 
