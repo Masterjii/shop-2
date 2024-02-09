@@ -4,8 +4,8 @@
 
   - [Description](#description)
   - [Architecture](#architecture)
-  - [Features](#features)
   - [Technologies and Tools Used](#technologies-and-tools-used)
+  - [Features](#features)
   - [Principles](#principles)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -19,7 +19,7 @@ E-Commerce-Phase01 is a simple web app designed for managing and displaying prod
 
 The E-commerce App follows the MVC (Model-View-Controller) architecture, ensuring a clear separation of concerns and facilitating maintainability and scalability of the application.
 
-## Key Technologies
+## Technologies and Tools Used
 
 * **Backend:**
     * **Database:** MongoDB (MongoDB Atlas)
@@ -43,24 +43,22 @@ The E-commerce App follows the MVC (Model-View-Controller) architecture, ensurin
 * **Deployment:** Render(aws)
 
 ## Features
-
-1. **View Product Details:**
-   - Navigate through the product list and view specific details of each product, including name, image, prices, and descriptions.
-
-2. **Product Details Page:**
-   - Clicking on any product enables you to view detailed information about that particular product, including a comprehensive description.
-
-3. **Add and Modify Products:**
-   - Add new products to the catalog easily.
-   - Make changes to existing products, such as updating prices, images, and descriptions.
-
-4. **Delete Products:**
-   - Remove any specific product from the catalog effortlessly.
-
-5. **View Previous Changes:**
-   - Keep track of changes made to products by checking the history of modifications.
-
-
+* **Basic Features:**
+    * **User Registration and Authentication:** Seamlessly sign up and log in to your account to access personalized shopping experiences 
+    * **Product Reviews and Ratings:** Make informed purchasing decisions by reading reviews and ratings from other shoppers.
+    * **Wishlist:** Create a wishlist of your favorite products to save for later or share with friends and family.
+    * **Shopping Cart:** Add items to your shopping cart for easy checkout, with the ability to adjust quantities and remove products as needed
+    * **Multiple Payment Options:** Choose from a variety of payment methods, including credit/debit cards, PayPal, and other popular payment gateways.
+    * **Responsive Design:** Experience a seamless shopping experience across devices.
+    
+* **Key Features:**
+    * **Middleware for Authentication:**  Various middleware for checking user authentication, product authorship, seller status, review validation, and product validation.
+    * **Seller Privileges:** Sellers have additional functionalities such as adding new products, editing, and deleting.
+    * **Buyer Restrictions:**  Buyers can only view and review products.
+    * **Seller Product Edit/Delete:** Sellers can only edit or delete their own products, not those of other sellers.
+    * **Session Expiry/MaxAge:**  Sessions expire after 7 days.
+    * **Product Deletion Cascades:** Deleting a product removes it from the cart and wishlist.
+    
 ## Principles
 
 The project follows the following software development principles:
@@ -85,4 +83,4 @@ Follow these instructions to get a copy of the project up and running on your lo
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Masterjii/E-Commerce-Phase01.git
+   git clone https://github.com/Masterjii/shop-2.git
