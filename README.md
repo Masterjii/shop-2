@@ -19,15 +19,6 @@ E-Commerce-Phase01 is a simple web app designed for managing and displaying prod
 
 The E-commerce App follows the MVC (Model-View-Controller) architecture, ensuring a clear separation of concerns and facilitating maintainability and scalability of the application.
 
-## Live Demo
-
-See the action: [Live Demo](https://shop-he5h.onrender.com)
-
-## Screenshots
-
-![MyShop](https://github.com/Masterjii/shop-2/assets/122020633/a9d39ffb-b58d-4e7d-ba2f-bb72aac14114)
-![screencapture-shop-he5h-onrender-2024-02-08-20_58_46](https://github.com/Masterjii/shop-2/assets/122020633/1fb79b92-f1e8-4089-b00f-1091426d7afa)
-
 ## Technologies and Tools Used
 
 * **Backend:**
@@ -70,6 +61,15 @@ See the action: [Live Demo](https://shop-he5h.onrender.com)
     * **Session Expiry/MaxAge:**  Sessions expire after 7 days.
     * **Product Deletion Cascades:** Deleting a product removes it from the cart and wishlist.
     
+## Live Demo
+
+See the action: [Live Demo](https://shop-he5h.onrender.com)
+
+## Screenshots
+
+![MyShop](https://github.com/Masterjii/shop-2/assets/122020633/a9d39ffb-b58d-4e7d-ba2f-bb72aac14114)
+![screencapture-shop-he5h-onrender-2024-02-08-20_58_46](https://github.com/Masterjii/shop-2/assets/122020633/1fb79b92-f1e8-4089-b00f-1091426d7afa)
+
 ## Principles
 
 The project follows the following software development principles:
