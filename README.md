@@ -37,6 +37,7 @@ See the action: [Live Demo](https://shop-he5h.onrender.com)
     * **ORM:** Mongoose
     * **Templating:** EJS
     * **Additional Libraries:**
+        * `Axios`
         * `connect-flash`
         * `dotenv`
         * `joi` (validation)
@@ -61,9 +62,10 @@ See the action: [Live Demo](https://shop-he5h.onrender.com)
     * **Responsive Design:** Experience a seamless shopping experience across devices.
     
 * **Key Features:**
-    * **Middleware for Authentication:**  Various middleware for checking user authentication, product authorship, seller status, review validation, and product validation.
-    * **Seller Privileges:** Sellers have additional functionalities such as adding new products, editing, and deleting.
-    * **Buyer Restrictions:**  Buyers can only view and review products.
+    * **User Authentication:**  It is secured with SHA-256 along with salt Programming.
+    * **Middleware for Product Authentication:**  Various middleware for checking user authentication, product authorship, seller status, review validation, and product validation.
+    * **Buyer Restrictions:**  Buyers can only buy, view and review products.
+    * **Seller Privileges:** Sellers have additional functionalities such as adding new products, editing, and deleting. also it can accessible of all buyer features.
     * **Seller Product Edit/Delete:** Sellers can only edit or delete their own products, not those of other sellers.
     * **Session Expiry/MaxAge:**  Sessions expire after 7 days.
     * **Product Deletion Cascades:** Deleting a product removes it from the cart and wishlist.
