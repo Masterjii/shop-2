@@ -13,7 +13,7 @@
 
 ## Description
 
-E-Commerce-Phase01 is a simple web app designed for managing and displaying product information. The application allows users to view product details such as name, image, prices, and descriptions. Additionally, it provides essential functionalities for managing the product catalog.
+Myshop is a simple web app designed for managing and displaying product information. The application allows users to view product details such as name, image, prices, and descriptions. Additionally, it provides essential functionalities for managing the product catalog.
 
 ## Architecture
 
