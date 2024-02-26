@@ -1,5 +1,4 @@
-<%-include('./partials/header')%> 
-<%-include('./partials/navbar')%>
+<%-include('./partials/header')%> <%-include('./partials/navbar')%>
 
 <main>
   <%-include('./flash.ejs')%>
@@ -10,6 +9,9 @@
       <div
         class="card text-center shadow mt-3 mx-auto mb-3 hover-element"
         style="width: 24rem"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
       >
         <img
           class="img zoom-image"
@@ -30,9 +32,7 @@
           <p class="card-text"><%= item.desc %></p>
           <p class="card-text"><%= item.instock %></p>
           <a href="/products/<%=item._id%>" class="btn btnn btn-primary"
-            >View Product</a
-          >
-          
+            >View Product</a>
         </div>
       </div>
     </div>

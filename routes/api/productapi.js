@@ -13,9 +13,11 @@ router.post('/products/:productId/like', isLoggedIn , async(req,res)=>{
         let isLiked = user.wishlist.includes(productId);
         // console.log(isLiked);
         if (isLiked) {
-            await User.findByIdAndUpdate(req.user._id , {$pull: {wishlist : productId }})
+            await User.findByIdAndUpdate(user._id , {$pull: {wishlist : productId }});
+            req.flash('success', 'Product Removed from wishlist');
         } else {
-            await User.findByIdAndUpdate(req.user._id , {$addToSet: {wishlist : productId }})
+            await User.findByIdAndUpdate(user._id , {$addToSet: {wishlist : productId }})
+            req.flash('success', 'Product added to wishlist');
         }
     }
     catch(e){

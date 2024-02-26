@@ -22,6 +22,7 @@ router.get('/user/cart' ,isLoggedIn,  async (req,res)=>{
     }
 });
 
+// Cart route -
 router.get('/checkout/:id', async (req, res) => {
   let userId = req.params.id;
   let user = await User.findById(userId).populate('cart');
@@ -104,6 +105,8 @@ router.post('/user/cart/:productId/remove', isLoggedIn, async (req, res) => {
 
     // Remove the product from the user's cart
     await User.findByIdAndUpdate(userId, { $pull: { cart: productId } });
+    req.flash('success', 'Product Removed');
+
 
     res.redirect('/user/cart');
   } catch (error) {
